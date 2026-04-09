@@ -1,0 +1,16 @@
+﻿<Window x:Class="lab03.EstudiantesReaderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Estudiantes - DataReader" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <DataGrid x:Name="dgEstudiantes" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"       Binding="{Binding Id}"       Width="60"/>
+                <DataGridTextColumn Header="Nombre"   Binding="{Binding Nombre}"   Width="*"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="*"/>
+                <DataGridTextColumn Header="Edad"     Binding="{Binding Edad}"     Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

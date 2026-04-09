@@ -1,0 +1,27 @@
+﻿<Window x:Class="lab03.BuscarProductoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Buscar Producto por Precio" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Precio mín:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+            <TextBox x:Name="txtMin" Width="90" Height="30"/>
+            <TextBlock Text="Precio máx:" VerticalAlignment="Center" Margin="12,0,6,0"/>
+            <TextBox x:Name="txtMax" Width="90" Height="30"/>
+            <Button Content="Buscar" Width="80" Height="30" Margin="10,0,0,0" Click="BtnBuscar_Click"/>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="dgResultados" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"     Binding="{Binding Id}"     Width="60"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" Width="100"/>
+                <DataGridTextColumn Header="Stock"  Binding="{Binding Stock}"  Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

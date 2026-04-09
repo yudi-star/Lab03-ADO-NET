@@ -1,0 +1,30 @@
+﻿<Window x:Class="lab03.BuscarEstudianteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab03"
+        mc:Ignorable="d"
+        Title="BuscarEstudianteWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Nombre:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <TextBox x:Name="txtNombre" Width="220" Height="30"/>
+            <Button Content="Buscar" Width="80" Height="30" Margin="8,0,0,0" Click="BtnBuscar_Click"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" x:Name="dgResultados" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"       Binding="{Binding Id}"       Width="60"/>
+                <DataGridTextColumn Header="Nombre"   Binding="{Binding Nombre}"   Width="*"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" Width="*"/>
+                <DataGridTextColumn Header="Edad"     Binding="{Binding Edad}"     Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

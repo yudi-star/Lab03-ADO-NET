@@ -1,0 +1,25 @@
+﻿<Window x:Class="lab03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab03"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="40">
+        <StackPanel>
+            <TextBlock Text="MENÚ PRINCIPAL" FontSize="22" FontWeight="Bold"
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <TextBlock Text="👨‍🎓 Estudiantes" FontSize="14" FontWeight="Bold" Margin="0,0,0,6"/>
+            <Button Content="1. Listar Estudiantes (DataTable)"   Click="BtnEstDataTable_Click"  Height="35" Margin="0,0,0,5"/>
+            <Button Content="2. Listar Estudiantes (DataReader)"  Click="BtnEstReader_Click"     Height="35" Margin="0,0,0,5"/>
+            <Button Content="3. Buscar Estudiante por Nombre"     Click="BtnBuscarEst_Click"     Height="35" Margin="0,0,0,15"/>
+
+            <TextBlock Text="🛒 Productos" FontSize="14" FontWeight="Bold" Margin="0,0,0,6"/>
+            <Button Content="4. Listar Productos (DataTable)"     Click="BtnProdDataTable_Click" Height="35" Margin="0,0,0,5"/>
+            <Button Content="5. Listar Productos (DataReader)"    Click="BtnProdReader_Click"    Height="35" Margin="0,0,0,5"/>
+            <Button Content="6. Buscar Productos por Rango Precio" Click="BtnBuscarProd_Click"   Height="35"/>
+        </StackPanel>
+    </Grid>
+</Window>
